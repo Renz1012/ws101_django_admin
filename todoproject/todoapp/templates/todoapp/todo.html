@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} 
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>DAYO CAR GARAGE</title>
+{% endblock %} 
+
+{% block content %} 
+    <h1 class="text-center mt-3 mb-3">DAYO CAR GARAGE UNITS</h1>
+    <div class="container">
+        <form method="post" class="jumbotron">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" value="Add Unit" class="btn btn-success">
+        </form>
+    </div>
+{% endblock %}
